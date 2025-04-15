@@ -3,11 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friends Church <br>-Quakers-<br>Likoni Monthly Meeting</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Friends Church Quakers - Likoni Monthly Meeting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Basic styling - you should move this to a separate CSS file */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background-color: #1a3a6e;
+            color: white;
+            padding: 1rem 0;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo img {
+            height: 60px;
+        }
+        .logo-text h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .logo-text span {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            color: #f8b739;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/slide1.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            color: #1a3a6e;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .section-title:after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #f8b739;
+            margin: 10px auto;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 1rem;
+        }
+        footer {
+            background-color: #1a3a6e;
+            color: white;
+            padding: 2rem 0;
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-column h3 {
+            border-bottom: 2px solid #f8b739;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        .copyright {
+            text-align: center;
+            padding: 1rem;
+            background-color: #0f2752;
+            margin-top: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #f8b739;
+            color: #1a3a6e;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e6a612;
+        }
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
-<section id="Home">
-<>
+<body>
     <header>
         <div class="header-container">
             <div class="logo">
@@ -21,130 +170,190 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#worshop">Worship</a></li>
-                    <li><a href="#ministry">Ministries</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#comtact">Contact</a></li>
+                    <li><a href="#beliefs">Our Beliefs</a></li>
+                    <li><a href="#worship">Worship</a></li>
+                    <li><a href="#ministries">Ministries</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
-    <section class="hero">
-        <div class="hero-slideshow">
-            <div class="slide active" style="background-image: url('images/slide1.jpeg')"></div>
-            <div class="slide" style="background-image: url('images/slide2.jpeg')"></div>
-            <div class="slide" style="background-image: url('images/slide3.jpeg')"></div>
-        </div>
-        <div class="hero-content">
-            <h2>Welcome to Likoni Monthly Meeting</h2>
-            <p>A vibrant Quaker community under Nairobi Yearly Meeting, committed to peace, simplicity, and service in the Likoni region.</p>
-            <a href="#" class="btn">Learn More About Us</a>
-        </div>
+    <section class="hero" id="home">
+        <h1>Welcome to Likoni Monthly Meeting</h1>
+        <p>A vibrant Quaker community under Nairobi Yearly Meeting, committed to peace, simplicity, and service</p>
+        <a href="#about" class="btn">Learn More About Us</a>
     </section>
-</section>
+    
     <main class="container">
-        <section id="ministry">
-            <h2 class="section-title">Our Ministries</h2>
+        <section id="about">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <p>Friends Church Quakers Likoni Monthly Meeting is part of the Nairobi Yearly Meeting of Friends Church in Kenya. We are a community of believers committed to living out the Quaker testimonies of simplicity, peace, integrity, community, equality, and stewardship.</p>
+                
+                <h3>Our History</h3>
+                <p>Established in [year], Likoni Monthly Meeting has been serving the Likoni community through worship, fellowship, and various outreach programs. We trace our roots back to the early Quaker movement in Kenya and maintain strong ties with the wider Friends Church community.</p>
+                
+                <h3>Our Connection to Nairobi Yearly Meeting</h3>
+                <p>As part of Nairobi Yearly Meeting, we share in the broader mission and vision of Friends Church in Kenya. The Yearly Meeting provides spiritual covering, leadership development, and coordination of joint ministries across our region.</p>
+            </div>
+        </section>
+        
+        <section id="beliefs">
+            <h2 class="section-title">Our Beliefs</h2>
             <div class="card-container">
                 <div class="card">
-                    <img src="images/slide1.jpeg" alt="Worship Service">
                     <div class="card-content">
-                        <h3>Sunday Worship</h3>
-                        <p>Join us every Sunday for uplifting worship services that blend Quaker traditions with contemporary faith expressions.</p>
-                        <a href="#">Learn More →</a>
+                        <h3><i class="fas fa-dove"></i> Peace</h3>
+                        <p>We believe in the power of God's love to overcome violence and conflict, following Jesus' teaching to love our enemies and pursue reconciliation in all relationships.</p>
                     </div>
                 </div>
                 
                 <div class="card">
-                    <img src="images/slide2.jpeg" alt="Youth Program">
                     <div class="card-content">
-                        <h3>Youth Fellowship</h3>
-                        <p>Our vibrant youth ministry engages young people through Bible study, mentorship, and community service projects.</p>
-                        <a href="#">Learn More →</a>
+                        <h3><i class="fas fa-heart"></i> Integrity</h3>
+                        <p>We strive to live lives of honesty and authenticity, letting our yes be yes and our no be no. We seek to align our actions with our beliefs in all areas of life.</p>
                     </div>
                 </div>
                 
                 <div class="card">
-                    <img src="images/slide3.jpeg" alt="Community Service">
                     <div class="card-content">
-                        <h3>Community Outreach</h3>
-                        <p>We actively serve our Likoni community through various initiatives addressing local needs and spreading God's love.</p>
-                        <a href="#">Learn More →</a>
+                        <h3><i class="fas fa-hands-helping"></i> Community</h3>
+                        <p>We value deep, authentic relationships where we support and encourage one another in our faith journeys, bearing one another's burdens and celebrating together.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-equals"></i> Equality</h3>
+                        <p>We believe all people are equal before God and seek to reflect this in our church life and society. We affirm the worth and dignity of every individual.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-leaf"></i> Simplicity</h3>
+                        <p>We embrace a lifestyle free from excess and distraction, focusing on what is truly important. We seek to live simply so others may simply live.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3><i class="fas fa-seedling"></i> Stewardship</h3>
+                        <p>We believe we are caretakers of God's creation, called to responsibly manage our time, talents, resources, and the environment for God's glory.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="events">
-            <h2 class="section-title">Upcoming Events</h2>
+        <section id="worship">
+            <h2 class="section-title">Worship With Us</h2>
             <div class="card-container">
                 <div class="card">
-                    <img src="images/logo.jpeg" alt="Bible Study">
+                    <img src="images/slide1.jpeg" alt="Sunday Service">
                     <div class="card-content">
-                        <h3>Weekly Bible Study</h3>
-                        <p><strong>Every Wednesday | 5:30 PM</strong></p>
-                        <p>Join us for in-depth Bible study and discussion at our meeting house.</p>
-                        <a href="#">Details →</a>
+                        <h3>Sunday Worship Service</h3>
+                        <p><strong>Every Sunday at 9:00 AM</strong></p>
+                        <p>Join us for our main weekly gathering featuring worship in song, prayer, and ministry of the Word.</p>
                     </div>
                 </div>
                 
                 <div class="card">
-                    <img src="images/slide1.jpeg" alt="Peace Workshop">
+                    <img src="images/slide2.jpeg" alt="Bible Study">
                     <div class="card-content">
-                        <h3>Peace & Reconciliation Workshop</h3>
-                        <p><strong>June 15, 2023 | 9:00 AM</strong></p>
-                        <p>A special workshop on Quaker peace testimony and conflict resolution.</p>
-                        <a href="#">Details →</a>
+                        <h3>Midweek Bible Study</h3>
+                        <p><strong>Wednesdays at 5:30 PM</strong></p>
+                        <p>A time for deeper study of Scripture and discussion in a small group setting.</p>
                     </div>
                 </div>
                 
                 <div class="card">
-                    <img src="images/slide3.jpeg" alt="Community Cleanup">
+                    <img src="images/slide3.jpeg" alt="Prayer Meeting">
                     <div class="card-content">
-                        <h3>Community Cleanup Day</h3>
-                        <p><strong>June 24, 2023 | 8:00 AM</strong></p>
-                        <p>Join us as we serve our community through a neighborhood cleanup initiative.</p>
-                        <a href="#">Details →</a>
+                        <h3>Prayer Meeting</h3>
+                        <p><strong>Fridays at 6:00 AM</strong></p>
+                        <p>Come together for powerful times of prayer and intercession for our church and community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="ministries">
+            <h2 class="section-title">Our Ministries</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="images/slide1.jpeg" alt="Youth Ministry">
+                    <div class="card-content">
+                        <h3>Youth Ministry</h3>
+                        <p>Engaging our young people through discipleship, fellowship, and service opportunities.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="images/slide2.jpeg" alt="Women's Ministry">
+                    <div class="card-content">
+                        <h3>Women's Ministry</h3>
+                        <p>Empowering women through Bible study, prayer, and practical support networks.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="images/slide3.jpeg" alt="Community Outreach">
+                    <div class="card-content">
+                        <h3>Community Outreach</h3>
+                        <p>Serving our Likoni community through various initiatives that demonstrate God's love in practical ways.</p>
+                        <a href="#" class="btn">Learn More</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     
-    <footer>
+    <footer id="contact">
         <div class="footer-container">
             <div class="footer-column">
-                <h3>About Us</h3>
-                <p>Likoni Monthly Meeting is part of Nairobi Yearly Meeting of Friends Church (Quakers) in Kenya, committed to the Quaker testimonies of peace, integrity, simplicity, and equality.</p>
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Friends Church Likoni<br>
+                P.O. Box XXXXX<br>
+                Likoni, Kenya</p>
+                
+                <p><i class="fas fa-phone"></i> +254 XXX XXX XXX</p>
+                
+                <p><i class="fas fa-envelope"></i> likonimonthlymeeting@gmail.com</p>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
             
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Quakers</a></li>
-                    <li><a href="#">Worship Times</a></li>
-                    <li><a href="#">Ministries</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#beliefs">Our Beliefs</a></li>
+                    <li><a href="#worship">Worship Times</a></li>
+                    <li><a href="#ministries">Ministries</a></li>
                 </ul>
             </div>
             
             <div class="footer-column">
-                <h3>Contact Information</h3>
-                <p><strong>Address:</strong><br>
-                Friends Church Likoni,<br>
-                P.O. Box XXXXX, Likoni, Kenya</p>
-                <p><strong>Phone:</strong> +254 XXX XXX XXX</p>
-                <p><strong>Email:</strong> info@friendschurchlikoni.org</p>
+                <h3>Weekly Schedule</h3>
+                <p><strong>Sunday:</strong> Worship Service - 9:00 AM</p>
+                <p><strong>Wednesday:</strong> Bible Study - 5:30 PM</p>
+                <p><strong>Friday:</strong> Prayer Meeting - 6:00 AM</p>
+                <p><strong>1st Sunday:</strong> Holy Communion</p>
             </div>
         </div>
         
         <div class="copyright">
-            <p>&copy; 2023 Friends Church Quakers - Likoni Monthly Meeting. All Rights Reserved.</p>
-            <p>Part of <a href="https://friendschurchnym.org" style="color: #e6a612;">Nairobi Yearly Meeting</a></p>
+            <p>&copy; 2025 starworld. All Rights Reserved.</p>
+            <p>Part of <a href="https://friendschurchnym.org" style="color: #f8b739;">Nairobi Yearly Meeting</a></p>
         </div>
     </footer>
-    <script src="js/script.js"></script>
 </body>
 </html>
